@@ -1,14 +1,16 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Container {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  background-color: #7181ad;
   color: white;
+  margin-top: 10em;
+  padding: 10em;
+  border-radius: 5px;
+  box-shadow: 1px 4px 10px grey;
 }
