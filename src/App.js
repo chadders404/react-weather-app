@@ -1,14 +1,18 @@
 import "./App.css";
-import SearchEngine from "./SearchEngine.js";
+import Weather from "./Weather.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="Container">
-          <SearchEngine />
-        </div>
-      </header>
+      <div>
+        <Weather />
+      </div>
+      <p>
+        This project was coded by Charlie Ruth Chadwick and is open-source on{" "}
+        {""}
+        <a href="https://github.com/chadders404/react-weather-app">GitHub</a>
+        👾
+      </p>
     </div>
   );
 }

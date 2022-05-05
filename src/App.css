@@ -1,16 +1,71 @@
 .App {
-  font-family: sans-serif;
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 .Container {
-  display: block;
+  display: grid;
+  grid-template-rows: 2em 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
   margin: 0 auto;
-  width: 50%;
+  width: 50vw;
+  max-width: 30em;
   height: auto;
-  text-align: center;
-  background-color: #7181ad;
-  color: white;
-  margin-top: 10em;
-  padding: 10em;
+  background-color: white;
+  color: black;
+  padding: 2em;
+  border: 1px solid rgb(168, 168, 168);
   border-radius: 5px;
   box-shadow: 1px 4px 10px grey;
+}
+.searchBar {
+  height: 2em;
+}
+.searchForm {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  grid-column: 1 / span 7;
+  grid-row: 1 / 2;
+  justify-self: left;
+}
+.submitButton {
+  height: 2em;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0 auto;
+}
+.dateTimeDiscription {
+  grid-column: 1 / span 4;
+  grid-row: 2 / 3;
+  color: rgb(87, 87, 87);
+  justify-items: left;
+  text-align: left;
+}
+.dateTimeDiscription h1 {
+  margin: 0 auto;
+  padding: 0px;
+  font-weight: 400;
+  font-size: 2em;
+}
+.icon {
+  grid-column: 1;
+  grid-row: 3;
+}
+.mainTemp {
+  grid-column: 2 / span 3;
+  grid-row: 3 / 4;
+  color: rgb(87, 87, 87);
+  font-size: 3em;
+}
+.mainTemp span {
+  font-size: 1em;
+}
+.weatherProperties {
+  grid-column: 5 / span 3;
+  color: rgb(87, 87, 87);
+  grid-row: 3 / 4;
+  text-align: right;
 }
