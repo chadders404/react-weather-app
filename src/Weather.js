@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 export default function Search(props) {
-  let [city, setCity] = useState("");
-  let [results, setResults] = useState("");
+  let [city, setCity] = useState("Cardiff");
 
   function showResults(event) {
     event.preventDefault();
@@ -18,6 +17,7 @@ export default function Search(props) {
           className="searchBar"
           type="search"
           placeholder="Enter a city..."
+          autoFocus="on"
           onChange={updateCity}
         />
         <input type="submit" value="Search" className="submitButton" />
@@ -39,14 +39,15 @@ export default function Search(props) {
       </div>
 
       <div className="mainTemp">
-        6<span>°C</span>
+        <span className="mainTempNumber">6</span>
+        <span className="tempUnit">°C</span>
       </div>
 
       <div className="weatherProperties">
         <ul>
-          <li>Precipitation</li>
-          <li>Humidity</li>
-          <li>Wind</li>
+          <li>Precipitation: 15% </li>
+          <li>Humidity: 69% </li>
+          <li>Wind: 15 km/hr</li>
         </ul>
       </div>
     </div>
