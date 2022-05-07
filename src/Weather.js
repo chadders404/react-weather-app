@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate.js";
 import "./App.css";
 
-export default function Search() {
-  let [city, setCity] = useState("London");
-
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
-      city: response.data.name,
+      ready: true,
+      city: props.defaultCity,
+      date: new Date(response.data.dt * 1000),
       mainTemp: response.data.main.temp,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
       description: response.data.weather[0].description,
@@ -18,18 +19,13 @@ export default function Search() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
     });
-    setReady(true);
   }
 
   function showResults(event) {
     event.preventDefault();
   }
 
-  function updateCity(event) {
-    event.preventDefault();
-    setCity(event.target.value);
-  }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Container">
         <form onSubmit={showResults} className="searchForm">
@@ -38,7 +34,6 @@ export default function Search() {
             type="search"
             placeholder="Search for a city..."
             autoFocus="on"
-            onChange={updateCity}
           />
           <input type="submit" value="Search" className="submitButton" />
         </form>
@@ -46,7 +41,10 @@ export default function Search() {
         <div className="dateTimeDescription">
           <ul>
             <h1>{weatherData.city}</h1>
-            <li>Day/Time</li>
+            <li>
+              {weatherData.date.getDay()}
+              <FormattedDate />
+            </li>
             <li>{weatherData.description}</li>
           </ul>
         </div>
