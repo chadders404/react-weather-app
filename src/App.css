@@ -45,15 +45,16 @@ ul {
   padding: 0px;
   margin: 0 auto;
 }
-.dateTimeDiscription {
+.dateTimeDescription {
   grid-column: 1 / span 4;
   grid-row: 2 / 3;
   color: rgb(87, 87, 87);
   padding-left: 0.75em;
   justify-items: left;
   text-align: left;
+  text-transform: capitalize;
 }
-.dateTimeDiscription h1 {
+.dateTimeDescription h1 {
   margin: 0 auto;
   padding: 0px;
   font-weight: 400;
@@ -79,7 +80,7 @@ ul {
   font-size: 1em;
 }
 .weatherProperties {
-  grid-column: 5 / span 3;
+  grid-column: 6 / span 3;
   color: rgb(87, 87, 87);
   grid-row: 3 / 4;
   text-align: left;
