@@ -11,7 +11,7 @@
   display: grid;
   grid-template-rows: 3em 1fr 6em;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0.25em;
+  gap: 0.5em;
   height: auto;
   background-color: white;
   color: black;
@@ -25,6 +25,7 @@
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 1fr;
   grid-column: 1 / span 7;
+  row-gap: 0.25em;
 }
 .searchBar {
   height: 2.5em;
