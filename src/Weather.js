@@ -5,7 +5,7 @@ import "./App.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  let [city, setCity] = useState(props.defaultCity);
+  let city = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -42,8 +42,7 @@ export default function Weather(props) {
           <ul>
             <h1>{weatherData.city}</h1>
             <li>
-              {weatherData.date.getDay()}
-              <FormattedDate />
+              <FormattedDate date={weatherData.date} />
             </li>
             <li>{weatherData.description}</li>
           </ul>
