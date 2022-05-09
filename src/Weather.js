@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate.js";
+import WeatherInfo from "./WeatherInfo";
 import "./App.css";
 
 export default function Weather(props) {
@@ -37,35 +37,7 @@ export default function Weather(props) {
           />
           <input type="submit" value="Search" className="submitButton" />
         </form>
-
-        <div className="dateTimeDescription">
-          <ul>
-            <h1>{weatherData.city}</h1>
-            <li>
-              <FormattedDate date={weatherData.date} />
-            </li>
-            <li>{weatherData.description}</li>
-          </ul>
-        </div>
-
-        <div className="icon">
-          <img src={weatherData.iconUrl} alt={weatherData.description} />
-        </div>
-
-        <div className="mainTemp">
-          <span className="mainTempNumber">
-            {Math.round(weatherData.mainTemp)}
-          </span>
-          <span className="tempUnit">°C</span>
-        </div>
-
-        <div className="weatherProperties">
-          <ul>
-            {/* <li>Precipitation: {weatherData.precipitation}% </li> */}
-            <li>Humidity: {Math.round(weatherData.humidity)}% </li>
-            <li>Wind: {Math.round(weatherData.wind)} km/hr</li>
-          </ul>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
