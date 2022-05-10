@@ -13,7 +13,7 @@ export default function Weather(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       mainTemp: response.data.main.temp,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       precipitation: response.data.main.precipitation,
       humidity: response.data.main.humidity,
