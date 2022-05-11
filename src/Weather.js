@@ -56,8 +56,8 @@ export default function Weather(props) {
   } else {
     search();
     return (
-      <div className="loader">
-        <ThreeDots color="#000000" />
+      <div>
+        <ThreeDots fill="#000" />
       </div>
     );
   }

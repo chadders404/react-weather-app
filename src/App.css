@@ -9,7 +9,7 @@
 }
 .Container {
   display: grid;
-  grid-template-rows: 3em 1fr;
+  grid-template-rows: 3em 1fr 8em;
   grid-template-columns: repeat(7, 1fr);
   gap: 0.5em;
   height: auto;
@@ -103,7 +103,4 @@ a {
   color: rgb(138, 138, 138);
   text-decoration: none;
   font-weight: 400;
-}
-.loader {
-  color: black;
 }
