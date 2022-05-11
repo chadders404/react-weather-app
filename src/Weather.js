@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import { ThreeDots } from "react-loading-icons";
 import "./App.css";
 
 export default function Weather(props) {
@@ -54,6 +55,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="loader">
+        <ThreeDots color="#000000" />
+      </div>
+    );
   }
 }

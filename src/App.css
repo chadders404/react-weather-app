@@ -104,3 +104,6 @@ a {
   text-decoration: none;
   font-weight: 400;
 }
+.loader {
+  color: black;
+}
