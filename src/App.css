@@ -93,11 +93,22 @@ ul {
 }
 .weatherProperties {
   grid-column: 6 / span 3;
-  color: rgb(87, 87, 87);
   grid-row: 3;
   text-align: left;
   justify-self: start;
   font-size: 1.5em;
+  color: rgb(87, 87, 87);
+}
+.footer {
+  grid-row: 3;
+  grid-column: 1 / span 7;
+}
+.ForecastSubgrid {
+  display: grid;
+  gap: 0.5em;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(7, 1fr);
+  color: rgb(87, 87, 87);
 }
 a {
   color: rgb(138, 138, 138);

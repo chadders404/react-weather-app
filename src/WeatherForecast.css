@@ -1,0 +1,15 @@
+.WeatherForecast-icon {
+  margin: 1em;
+}
+.ForecastSubgrid {
+  display: grid;
+  gap: 0.5em;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(7, 1fr);
+  color: rgb(87, 87, 87);
+  font-size: 1em;
+}
+
+.WeatherForecast-temp-min {
+  opacity: 0.6;
+}

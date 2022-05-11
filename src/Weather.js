@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherInfo from "./WeatherInfo";
 import { ThreeDots } from "react-loading-icons";
+import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast.js";
 import "./App.css";
 
 export default function Weather(props) {
@@ -51,6 +52,9 @@ export default function Weather(props) {
           <input type="submit" value="Search" className="submitButton" />
         </form>
         <WeatherInfo data={weatherData} />
+        <div className="footer">
+          <WeatherForecast />
+        </div>
       </div>
     );
   } else {

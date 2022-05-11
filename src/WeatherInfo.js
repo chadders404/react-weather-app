@@ -15,16 +15,17 @@ export default function WeatherInfo(props) {
           <li>{props.data.description}</li>
         </ul>
       </div>
-
       <div className="icon">
-        <WeatherIcon code={props.data.icon} alt={props.data.description} />
+        <WeatherIcon
+          code={props.data.icon}
+          alt={props.data.description}
+          size={60}
+        />
         {/* <img src={props.data.iconUrl} alt={props.data.description} /> */}
       </div>
-
       <div className="mainTemp">
         <WeatherTemperature celsius={props.data.mainTemp} />
       </div>
-
       <div className="weatherProperties">
         <ul>
           {/* <li>Precipitation: {props.data.precipitation}% </li> */}
