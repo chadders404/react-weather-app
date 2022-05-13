@@ -103,13 +103,7 @@ ul {
   grid-row: 3;
   grid-column: 1 / span 7;
 }
-.ForecastSubgrid {
-  display: grid;
-  gap: 0.5em;
-  grid-template-rows: 1;
-  grid-template-columns: repeat(7, 1fr);
-  color: rgb(87, 87, 87);
-}
+
 a {
   color: rgb(138, 138, 138);
   text-decoration: none;
